@@ -94,7 +94,7 @@ resource "aws_instance" "kube-master" {
   vpc_security_group_ids = [aws_security_group.k8s-sec-gr.id]
   key_name = "clarus"
   subnet_id = "subnet-0d2c83e19241e7ff4"  # select own subnet_id of us-east-1a
-  availability_zone = "us-east-1a"
+  availability_zone = "us-east-1c"
   tags = {
     Name = "kube-master"
     Project = "tera-kube-ans"
@@ -110,7 +110,7 @@ resource "aws_instance" "worker-1" {
   vpc_security_group_ids = [aws_security_group.k8s-sec-gr.id]
   key_name = "clarus"
   subnet_id = "subnet-0d2c83e19241e7ff4"  # select own subnet_id of us-east-1a
-  availability_zone = "us-east-1a"
+  availability_zone = "us-east-1c"
   tags = {
     Name = "worker-1"
     Project = "tera-kube-ans"
@@ -126,7 +126,7 @@ resource "aws_instance" "worker-2" {
   vpc_security_group_ids = [aws_security_group.k8s-sec-gr.id]
   key_name = "clarus"
   subnet_id = "subnet-0d2c83e19241e7ff4"  # select own subnet_id of us-east-1a
-  availability_zone = "us-east-1a"
+  availability_zone = "us-east-1c"
   tags = {
     Name = "worker-2"
     Project = "tera-kube-ans"
